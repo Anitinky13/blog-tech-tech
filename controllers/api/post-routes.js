@@ -1,12 +1,21 @@
 const router = require("express").Router();
-const { json } = require("body-parser");
-const { Router } = require("express");
-const { Post, User } = require("../../models");
+const { Post, User, Comment } = require("../../models");
+
+//to get all posts
 router.get("/", (req, res) => {
+  console.log("======================");
   Post.findAll({
-    attributes: ["id", "post_url", "title", "created_at"],
+    attributes: ["id", "title", "post_body", "created_at"],
     order: [["created_at", "DESC"]],
     include: [
+      {
+        model: Comment,
+        attributes: ["id", "comment_text", "post_id", "created_at"],
+        include: {
+          model: User,
+          attributes: ["username"],
+        },
+      },
       {
         model: User,
         attributes: ["username"],
