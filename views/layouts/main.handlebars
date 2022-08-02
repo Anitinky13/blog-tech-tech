@@ -5,58 +5,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLOG TECH TECH</title>
-    <link rel=""stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"/>
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
 
-  
+  <body>
     <div class="wrapper">
       <header>
         <h1 class="title is-1 has-test-black px-4 py-4 has-text-weight-bold">Blog Tech</h1>
         </h1>
         <nav class ="navbar is-fixed-top is-spaced has-shadow">
-              {{#if loggedIn}}
+              {{#if loggedIn }}
               <a href ="/" class="navbar-item is-hoverable pt-2"> Home</a>
               <a href ="/dashboard" class ="navbar-item is-hoverable pt-2">Dashboard</a>
               <a href ="dashboard/new/" class="navbar-item is-hoverable pt-2 mr-3">New Post</a>
               <button id="logout" class="button is-danger is-light">Logout</button>
-              {{else}}
+              {{else }}
               <a href ="/" class="navbar-item is-hoverable pt-2">Home</a>
               <a href="/login" class="button is-success ">Login</a>
+              {{/if}}
         </nav>
       </header>
       <main>
         {{{body}}}
       </main>
-      <footer>
+
             <footer class="footer rows pb-3">
   <div class="row-is-full content has-text-centered">
     <p>
-     < href ="/">Home</a>{{#if loggedIn}} |
+     <a href ="/">Home</a>{{#if loggedIn}} |
      <a href ="/dashboard/">Dashboard</a> |
-     <a href=""/dashboard/new/">New Post</a>
-     {{else}}
+     <a href="/dashboard/new/">New Post</a>
+     {{else }}
      | <a href="/login/">Login</a>
-     {{/if}}
+     {{/if }}
     </p>
   </div>
-  <div class =" row is full  content has-text-centered">
-  <p>
+  <div class ="row is full  content has-text-centered">
+      <p>
         <strong>Blog Tech</strong>
         by <a href="https://github.com/Anitinky13/blog-tech-tech">Anastasiya Litvinova</a>
         | source code:
         <a href ="https://github.com/Anitinky13/blog-tech-tech"><i class="fab fa-github"></i></a> |
         <a href="mailto:Ayefanova1@gmail.com"><i class="far fa-envelope"></i></a>
-  </p>
+      </p>
   </div>
-
 </footer>
-     
-    </div>
+      </div>
     {{#if loggedIn}}
     <script src="/public/javascript/logout.js"></script>
-    {{/if}}
+     {{/if }}
 
-  </body>
-
+</body>
 </html>
