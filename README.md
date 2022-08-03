@@ -1,6 +1,16 @@
 # blog-tech-tech
 
-## Description
+<img width="1512" alt="Screen Shot 2022-08-03 at 5 47 09 PM" src="https://user-images.githubusercontent.com/104174334/182726027-ff203618-164d-40ee-a050-a5eedaee966a.png">
+
+<img width="1512" alt="Screen Shot 2022-08-03 at 5 46 19 PM" src="https://user-images.githubusercontent.com/104174334/182726046-91abfe65-527e-4616-9177-eabfc5cbcc1b.png">
+
+
+<img width="1512" alt="Screen Shot 2022-08-03 at 5 47 12 PM" src="https://user-images.githubusercontent.com/104174334/182726064-2e8c1114-e7df-41f5-a7ec-41b4cb56be54.png">
+<img width="1512" alt="Screen Shot 2022-08-03 at 5 46 36 PM" src="https://user-images.githubusercontent.com/104174334/182726076-53b292d7-16f7-4903-81a2-a185c5c1bdde.<img width="1512" alt="Screen Shot 2022-08-03 at 5 46 51 PM" src="https://user-images.githubusercontent.com/104174334/182726111-5d43e736-ba01-404a-842c-f96fa349fc35.png">
+png">
+
+
+
 
 To build a CMS- style blog that is similar to a Wordpress site.Developers can publish blog posts, and comment on other posts.
 
