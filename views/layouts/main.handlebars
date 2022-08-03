@@ -15,13 +15,14 @@
         <h1 class="title is-1 has-test-black px-4 py-4 has-text-weight-bold">Blog Tech</h1>
         </h1>
         <nav class ="navbar is-fixed-top is-spaced has-shadow">
+               <a href ="/" class="navbar-item is-hoverable pt-2"> Home</a>
               {{#if loggedIn }}
-              <a href ="/" class="navbar-item is-hoverable pt-2"> Home</a>
+             
               <a href ="/dashboard" class ="navbar-item is-hoverable pt-2">Dashboard</a>
               <a href ="dashboard/new/" class="navbar-item is-hoverable pt-2 mr-3">New Post</a>
               <button id="logout" class="button is-danger is-light">Logout</button>
               {{else }}
-              <a href ="/" class="navbar-item is-hoverable pt-2">Home</a>
+        
               <a href="/login" class="button is-success ">Login</a>
               {{/if}}
         </nav>
@@ -53,7 +54,7 @@
 </footer>
       </div>
     {{#if loggedIn}}
-    <script src="/public/javascript/logout.js"></script>
+    <script src="/javascript/logout.js"></script>
      {{/if }}
 
 </body>
