@@ -25,7 +25,7 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ["id", "title", "post_body", "created_at"],
+        attributes: ["id", "title", "post_content", "created_at"],
       },
       {
         model: Comment,
@@ -77,7 +77,7 @@ router.post("/login", (req, res) => {
       res.status(404).json({ message: "No user with that email address!" });
       return;
     }
-    res.json({ user: dbUserData });
+
     //verify user
     const validPassword = dbUserData.checkPassword(req.body.password);
     if (!validPassword) {

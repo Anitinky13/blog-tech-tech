@@ -12,7 +12,7 @@ Comment.init(
       autoIncrement: true,
     },
     comment_text: {
-      type: DataTypes.STRING(1000),
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         let: [1],
@@ -20,6 +20,7 @@ Comment.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: "user",
         key: "id",
@@ -27,6 +28,7 @@ Comment.init(
     },
     post_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: "post",
         key: "id",
@@ -37,7 +39,7 @@ Comment.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "Comment",
+    modelName: "comment",
   }
 );
 
