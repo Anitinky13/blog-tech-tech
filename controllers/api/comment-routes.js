@@ -10,12 +10,23 @@ router.get("/", (req, res) => {
       res.json(500).json(err);
     });
 });
-
+router.get("/:id", (req, res) => {
+  Comment.findAll({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((dbCommentData) => res.json(dbCommentData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 router.post("/", withAuth, (req, res) => {
   if (req.session) {
     Comment.create({
       comment_text: req.body.comment_text,
-      user_id: req.body.user_id,
+      user_id: req.session.user_id,
       post_id: req.body.post_id,
     })
       .then((dbCommentData) => res.json(dbCommentData))
